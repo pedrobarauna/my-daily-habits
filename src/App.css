@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.app {
+  width: min(900px, 92%);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.habit-list {
+  display: grid;
+  gap: 16px;
+}
+
+.habit-card {
+  padding: 20px;
+
+  border: 1px solid #d7dde5;
+  border-radius: 12px;
+
+  background: #ffffff;
+}
