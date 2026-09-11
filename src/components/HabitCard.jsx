@@ -1,10 +1,13 @@
+import { useHabits } from "../context/HabitsContext";
+
 export default function HabitCard({
   id,
   title,
   goal,
   completed,
-  onToggle,
 }) {
+  const { handleToggleHabit } = useHabits();
+
   return (
     <article
       className={`habit-card ${
@@ -18,7 +21,7 @@ export default function HabitCard({
 
       <button
         type="button"
-        onClick={() => onToggle(id)}
+        onClick={() => handleToggleHabit(id)}
       >
         {completed ? "Desmarcar" : "Concluir"}
       </button>

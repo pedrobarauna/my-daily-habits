@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useHabits } from "../context/HabitsContext";
 
-export default function HabitForm({ onAddHabit }) {
+export default function HabitForm() {
+  const { handleAddHabit } = useHabits();
+
   const [form, setForm] = useState({
     title: "",
     goal: "",
@@ -28,7 +31,7 @@ export default function HabitForm({ onAddHabit }) {
       return;
     }
 
-    onAddHabit({
+    handleAddHabit({
       id: crypto.randomUUID(),
       title,
       goal,
